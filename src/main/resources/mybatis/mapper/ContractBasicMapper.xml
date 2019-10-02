@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.dhc.ec.rpc.product.dao.ContractBasicDao">
+  <resultMap id="BaseResultMap" type="cn.com.dhc.ec.rpc.product.entity.ContractBasic">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="cooperation_basic_id" jdbcType="BIGINT" property="cooperationBasicId" />
+    <result column="vender_name" jdbcType="VARCHAR" property="venderName" />
+    <result column="vender_code" jdbcType="VARCHAR" property="venderCode" />
+    <result column="join_dept" jdbcType="VARCHAR" property="joinDept" />
+    <result column="main_brand" jdbcType="VARCHAR" property="mainBrand" />
+    <result column="first_party" jdbcType="VARCHAR" property="firstParty" />
+    <result column="cooperation_modes" jdbcType="INTEGER" property="cooperationModes" />
+    <result column="cooperation_area" jdbcType="INTEGER" property="cooperationArea" />
+    <result column="company_address" jdbcType="VARCHAR" property="companyAddress" />
+    <result column="create_user" jdbcType="VARCHAR" property="createUser" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="modify_user" jdbcType="VARCHAR" property="modifyUser" />
+    <result column="modify_date" jdbcType="TIMESTAMP" property="modifyDate" />
+  </resultMap>
+  
+  
+  
+  
+  <resultMap id="ContractBasicVOResultMap" type="cn.com.dhc.ec.rpc.product.vo.ContractBasicVO">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="cooperation_basic_id" jdbcType="BIGINT" property="cooperationBasicId" />
+    <result column="vender_name" jdbcType="VARCHAR" property="venderName" />
+    <result column="vender_code" jdbcType="VARCHAR" property="venderCode" />
+    <result column="join_dept" jdbcType="VARCHAR" property="joinDept" />
+    <result column="main_brand" jdbcType="VARCHAR" property="mainBrand" />
+    <result column="first_party" jdbcType="VARCHAR" property="firstParty" />
+    <result column="cooperation_modes" jdbcType="INTEGER" property="cooperationModes" />
+    <result column="cooperation_area" jdbcType="INTEGER" property="cooperationArea" />
+    <result column="company_address" jdbcType="VARCHAR" property="companyAddress" />
+    <result column="create_user" jdbcType="VARCHAR" property="createUser" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="modify_user" jdbcType="VARCHAR" property="modifyUser" />
+    <result column="modify_date" jdbcType="TIMESTAMP" property="modifyDate" />
+  
+  
+  
+      <result column="contract_baseic_id" jdbcType="BIGINT" property="contractBaseicId" />
+    <result column="last_year_sales_ind_tax" jdbcType="VARCHAR" property="lastYearSalesIndTax" />
+    <result column="last_year_sales_gross_ind_tax" jdbcType="VARCHAR" property="lastYearSalesGrossIndTax" />
+    <result column="last_year_settlement_paym" jdbcType="VARCHAR" property="lastYearSettlementPaym" />
+    <result column="last_year_first_target_rebate" jdbcType="VARCHAR" property="lastYearFirstTargetRebate" />
+    <result column="last_year_second_target_rebate" jdbcType="VARCHAR" property="lastYearSecondTargetRebate" />
+    <result column="last_year_thirdly_target_rebate" jdbcType="VARCHAR" property="lastYearThirdlyTargetRebate" />
+    <result column="last_year_fourthly_target_rebate" jdbcType="VARCHAR" property="lastYearFourthlyTargetRebate" />
+    <result column="last_year_no_return_award" jdbcType="VARCHAR" property="lastYearNoReturnAward" />
+    <result column="last_year_logistics_mode" jdbcType="VARCHAR" property="lastYearLogisticsMode" />
+    <result column="last_year_store_service" jdbcType="VARCHAR" property="lastYearStoreService" />
+    <result column="last_year_promotion_discount" jdbcType="VARCHAR" property="lastYearPromotionDiscount" />
+    <result column="last_year_damage_discount" jdbcType="VARCHAR" property="lastYearDamageDiscount" />
+    <result column="last_year_dt_promotion_service" jdbcType="VARCHAR" property="lastYearDtPromotionService" />
+    <result column="last_year_dj_promotion_service" jdbcType="VARCHAR" property="lastYearDjPromotionService" />
+    <result column="last_year_wc_promotion_service" jdbcType="VARCHAR" property="lastYearWcPromotionService" />
+    <result column="last_year_xc_promotion_service" jdbcType="VARCHAR" property="lastYearXcPromotionService" />
+    <result column="last_year_exhibition_service_fee" jdbcType="VARCHAR" property="lastYearExhibitionServiceFee" />
+    <result column="last_year_market_prom_service_fee" jdbcType="VARCHAR" property="lastYearMarketPromServiceFee" />
+    <result column="last_year_dm_publicize" jdbcType="VARCHAR" property="lastYearDmPublicize" />
+    <result column="last_year_qq_qz_gm" jdbcType="VARCHAR" property="lastYearQqQzGm" />
+    <result column="last_year_prom_service_fee" jdbcType="VARCHAR" property="lastYearPromServiceFee" />
+    <result column="last_year_prom_fund" jdbcType="VARCHAR" property="lastYearPromFund" />
+    <result column="last_year_festival_discount" jdbcType="VARCHAR" property="lastYearFestivalDiscount" />
+    <result column="last_year_credit_limit_fixed_amount" jdbcType="VARCHAR" property="lastYearCreditLimitFixedAmount" />
+    <result column="last_year_credit_limit_dynamic_amount" jdbcType="VARCHAR" property="lastYearCreditLimitDynamicAmount" />
+    <result column="last_year_other_instruction" jdbcType="VARCHAR" property="lastYearOtherInstruction" />
+    <result column="this_year_sales_ind_tax" jdbcType="VARCHAR" property="thisYearSalesIndTax" />
+    <result column="this_year_sales_gross_ind_tax" jdbcType="VARCHAR" property="thisYearSalesGrossIndTax" />
+    <result column="this_year_settlement_paym" jdbcType="VARCHAR" property="thisYearSettlementPaym" />
+    <result column="this_year_first_target_rebate" jdbcType="VARCHAR" property="thisYearFirstTargetRebate" />
+    <result column="this_year_second_target_rebate" jdbcType="VARCHAR" property="thisYearSecondTargetRebate" />
+    <result column="this_year_thirdly_target_rebate" jdbcType="VARCHAR" property="thisYearThirdlyTargetRebate" />
+    <result column="this_year_fourthly_target_rebate" jdbcType="VARCHAR" property="thisYearFourthlyTargetRebate" />
+    <result column="this_year_no_return_award" jdbcType="VARCHAR" property="thisYearNoReturnAward" />
+    <result column="this_year_logistics_mode" jdbcType="VARCHAR" property="thisYearLogisticsMode" />
+    <result column="this_year_store_service" jdbcType="VARCHAR" property="thisYearStoreService" />
+    <result column="this_year_promotion_discount" jdbcType="VARCHAR" property="thisYearPromotionDiscount" />
+    <result column="this_year_damage_discount" jdbcType="VARCHAR" property="thisYearDamageDiscount" />
+    <result column="this_year_dt_promotion_service" jdbcType="VARCHAR" property="thisYearDtPromotionService" />
+    <result column="this_year_dj_promotion_service" jdbcType="VARCHAR" property="thisYearDjPromotionService" />
+    <result column="this_year_wc_promotion_service" jdbcType="VARCHAR" property="thisYearWcPromotionService" />
+    <result column="this_year_xc_promotion_service" jdbcType="VARCHAR" property="thisYearXcPromotionService" />
+    <result column="this_year_exhibition_service_fee" jdbcType="VARCHAR" property="thisYearExhibitionServiceFee" />
+    <result column="this_year_market_prom_service_fee" jdbcType="VARCHAR" property="thisYearMarketPromServiceFee" />
+    <result column="this_year_dm_publicize" jdbcType="VARCHAR" property="thisYearDmPublicize" />
+    <result column="this_year_qq_qz_gm" jdbcType="VARCHAR" property="thisYearQqQzGm" />
+    <result column="this_year_prom_service_fee" jdbcType="VARCHAR" property="thisYearPromServiceFee" />
+    <result column="this_year_prom_fund" jdbcType="VARCHAR" property="thisYearPromFund" />
+    <result column="this_year_festival_discount" jdbcType="VARCHAR" property="thisYearFestivalDiscount" />
+    <result column="this_year_credit_limit_fixed_amount" jdbcType="VARCHAR" property="thisYearCreditLimitFixedAmount" />
+    <result column="this_year_credit_limit_dynamic_amount" jdbcType="VARCHAR" property="thisYearCreditLimitDynamicAmount" />
+    <result column="this_year_other_instruction" jdbcType="VARCHAR" property="thisYearOtherInstruction" />
+    
+  
+  </resultMap>
+  
+  
+  
+  
+  
+  
+   <sql id="Base_Column_List">
+    t1.id, cooperation_basic_id, vender_name, vender_code, join_dept, main_brand, first_party, 
+    cooperation_modes, cooperation_area, company_address
+     </sql>
+    
+    <sql id="ContractBasicVO_Column_List">
+        <include refid="Base_Column_List" />  ,last_year_sales_ind_tax, last_year_sales_gross_ind_tax, last_year_settlement_paym, 
+    last_year_first_target_rebate, last_year_second_target_rebate, last_year_thirdly_target_rebate, 
+    last_year_fourthly_target_rebate, last_year_no_return_award, last_year_logistics_mode, 
+    last_year_store_service, last_year_promotion_discount, last_year_damage_discount, 
+    last_year_dt_promotion_service, last_year_dj_promotion_service, last_year_wc_promotion_service, 
+    last_year_xc_promotion_service, last_year_exhibition_service_fee, last_year_market_prom_service_fee, 
+    last_year_dm_publicize, last_year_qq_qz_gm, last_year_prom_service_fee, last_year_prom_fund, 
+    last_year_festival_discount, last_year_credit_limit_fixed_amount, last_year_credit_limit_dynamic_amount, 
+    last_year_other_instruction, this_year_sales_ind_tax, this_year_sales_gross_ind_tax, 
+    this_year_settlement_paym, this_year_first_target_rebate, this_year_second_target_rebate, 
+    this_year_thirdly_target_rebate, this_year_fourthly_target_rebate, this_year_no_return_award, 
+    this_year_logistics_mode, this_year_store_service, this_year_promotion_discount, 
+    this_year_damage_discount, this_year_dt_promotion_service, this_year_dj_promotion_service, 
+    this_year_wc_promotion_service, this_year_xc_promotion_service, this_year_exhibition_service_fee, 
+    this_year_market_prom_service_fee, this_year_dm_publicize, this_year_qq_qz_gm, this_year_prom_service_fee, 
+    this_year_prom_fund, this_year_festival_discount, this_year_credit_limit_fixed_amount, 
+    this_year_credit_limit_dynamic_amount, this_year_other_instruction
+  </sql>
+
+
+<select id="queryContractBasicVOByCooperationBasicId"   resultMap="ContractBasicVOResultMap">
+ select
+   
+    <include refid="ContractBasicVO_Column_List" />
+     from ss_contract_basic t1
+     left join ss_contract_terms t2 on t1.id=t2.contract_baseic_id
+    where cooperation_basic_id = #{id,jdbcType=BIGINT}
+
+</select>
+
+
+<select id="selectContractBasicByCooperationBasicId"   resultMap="BaseResultMap">
+ select
+   
+    <include refid="Base_Column_List" />
+     from ss_contract_basic t1
+    where cooperation_basic_id = #{id,jdbcType=BIGINT}
+
+</select>
+
+
+  <insert id="insertSelective" parameterType="cn.com.dhc.ec.rpc.product.entity.ContractBasic" useGeneratedKeys="true" keyProperty="id">
+    insert into ss_contract_basic
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="cooperationBasicId != null">
+        cooperation_basic_id,
+      </if>
+      <if test="venderName != null">
+        vender_name,
+      </if>
+      <if test="venderCode != null">
+        vender_code,
+      </if>
+      <if test="joinDept != null">
+        join_dept,
+      </if>
+      <if test="mainBrand != null">
+        main_brand,
+      </if>
+      <if test="firstParty != null">
+        first_party,
+      </if>
+      <if test="cooperationModes != null">
+        cooperation_modes,
+      </if>
+      <if test="cooperationArea != null">
+        cooperation_area,
+      </if>
+      <if test="companyAddress != null">
+        company_address,
+      </if>
+      <if test="createUser != null">
+        create_user,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="modifyUser != null">
+        modify_user,
+      </if>
+      <if test="modifyDate != null">
+        modify_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="cooperationBasicId != null">
+        #{cooperationBasicId,jdbcType=BIGINT},
+      </if>
+      <if test="venderName != null">
+        #{venderName,jdbcType=VARCHAR},
+      </if>
+      <if test="venderCode != null">
+        #{venderCode,jdbcType=VARCHAR},
+      </if>
+      <if test="joinDept != null">
+        #{joinDept,jdbcType=VARCHAR},
+      </if>
+      <if test="mainBrand != null">
+        #{mainBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="firstParty != null">
+        #{firstParty,jdbcType=VARCHAR},
+      </if>
+      <if test="cooperationModes != null">
+        #{cooperationModes,jdbcType=INTEGER},
+      </if>
+      <if test="cooperationArea != null">
+        #{cooperationArea,jdbcType=INTEGER},
+      </if>
+      <if test="companyAddress != null">
+        #{companyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUser != null">
+        #{modifyUser,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyDate != null">
+        #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+  
+  
+  
+  
+    <update id="updateByPrimaryKey" parameterType="cn.com.dhc.ec.rpc.product.entity.ContractBasic">
+    update ss_contract_basic
+    <set>
+      <if test="cooperationBasicId != null">
+        cooperation_basic_id = #{cooperationBasicId,jdbcType=BIGINT},
+      </if>
+      <if test="venderName != null">
+        vender_name = #{venderName,jdbcType=VARCHAR},
+      </if>
+      <if test="venderCode != null">
+        vender_code = #{venderCode,jdbcType=VARCHAR},
+      </if>
+      <if test="joinDept != null">
+        join_dept = #{joinDept,jdbcType=VARCHAR},
+      </if>
+      <if test="mainBrand != null">
+        main_brand = #{mainBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="firstParty != null">
+        first_party = #{firstParty,jdbcType=VARCHAR},
+      </if>
+      <if test="cooperationModes != null">
+        cooperation_modes = #{cooperationModes,jdbcType=INTEGER},
+      </if>
+      <if test="cooperationArea != null">
+        cooperation_area = #{cooperationArea,jdbcType=INTEGER},
+      </if>
+      <if test="companyAddress != null">
+        company_address = #{companyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUser != null">
+        modify_user = #{modifyUser,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyDate != null">
+        modify_date = #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+</mapper>
