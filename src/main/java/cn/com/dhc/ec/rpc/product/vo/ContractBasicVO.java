@@ -3,7 +3,7 @@ package cn.com.dhc.ec.rpc.product.vo;
 import java.util.Date;
 public class ContractBasicVO {
 
-    /** 合同基本信息ID 22*/
+    /** 合同基本信息ID 2211*/
     private Long id ;
     /** 合作意向单编号 */
     private Long cooperationBasicId ;
