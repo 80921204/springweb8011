@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.dhc.ec.rpc.product.dao.ContractTermsDao">
+  <resultMap id="BaseResultMap" type="cn.com.dhc.ec.rpc.product.entity.ContractTerms">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="contract_baseic_id" jdbcType="BIGINT" property="contractBaseicId" />
+    <result column="last_year_sales_ind_tax" jdbcType="VARCHAR" property="lastYearSalesIndTax" />
+    <result column="last_year_sales_gross_ind_tax" jdbcType="VARCHAR" property="lastYearSalesGrossIndTax" />
+    <result column="last_year_settlement_paym" jdbcType="VARCHAR" property="lastYearSettlementPaym" />
+    <result column="last_year_first_target_rebate" jdbcType="VARCHAR" property="lastYearFirstTargetRebate" />
+    <result column="last_year_second_target_rebate" jdbcType="VARCHAR" property="lastYearSecondTargetRebate" />
+    <result column="last_year_thirdly_target_rebate" jdbcType="VARCHAR" property="lastYearThirdlyTargetRebate" />
+    <result column="last_year_fourthly_target_rebate" jdbcType="VARCHAR" property="lastYearFourthlyTargetRebate" />
+    <result column="last_year_no_return_award" jdbcType="VARCHAR" property="lastYearNoReturnAward" />
+    <result column="last_year_logistics_mode" jdbcType="VARCHAR" property="lastYearLogisticsMode" />
+    <result column="last_year_store_service" jdbcType="VARCHAR" property="lastYearStoreService" />
+    <result column="last_year_promotion_discount" jdbcType="VARCHAR" property="lastYearPromotionDiscount" />
+    <result column="last_year_damage_discount" jdbcType="VARCHAR" property="lastYearDamageDiscount" />
+    <result column="last_year_dt_promotion_service" jdbcType="VARCHAR" property="lastYearDtPromotionService" />
+    <result column="last_year_dj_promotion_service" jdbcType="VARCHAR" property="lastYearDjPromotionService" />
+    <result column="last_year_wc_promotion_service" jdbcType="VARCHAR" property="lastYearWcPromotionService" />
+    <result column="last_year_xc_promotion_service" jdbcType="VARCHAR" property="lastYearXcPromotionService" />
+    <result column="last_year_exhibition_service_fee" jdbcType="VARCHAR" property="lastYearExhibitionServiceFee" />
+    <result column="last_year_market_prom_service_fee" jdbcType="VARCHAR" property="lastYearMarketPromServiceFee" />
+    <result column="last_year_dm_publicize" jdbcType="VARCHAR" property="lastYearDmPublicize" />
+    <result column="last_year_qq_qz_gm" jdbcType="VARCHAR" property="lastYearQqQzGm" />
+    <result column="last_year_prom_service_fee" jdbcType="VARCHAR" property="lastYearPromServiceFee" />
+    <result column="last_year_prom_fund" jdbcType="VARCHAR" property="lastYearPromFund" />
+    <result column="last_year_festival_discount" jdbcType="VARCHAR" property="lastYearFestivalDiscount" />
+    <result column="last_year_credit_limit_fixed_amount" jdbcType="VARCHAR" property="lastYearCreditLimitFixedAmount" />
+    <result column="last_year_credit_limit_dynamic_amount" jdbcType="VARCHAR" property="lastYearCreditLimitDynamicAmount" />
+    <result column="last_year_other_instruction" jdbcType="VARCHAR" property="lastYearOtherInstruction" />
+    <result column="this_year_sales_ind_tax" jdbcType="VARCHAR" property="thisYearSalesIndTax" />
+    <result column="this_year_sales_gross_ind_tax" jdbcType="VARCHAR" property="thisYearSalesGrossIndTax" />
+    <result column="this_year_settlement_paym" jdbcType="VARCHAR" property="thisYearSettlementPaym" />
+    <result column="this_year_first_target_rebate" jdbcType="VARCHAR" property="thisYearFirstTargetRebate" />
+    <result column="this_year_second_target_rebate" jdbcType="VARCHAR" property="thisYearSecondTargetRebate" />
+    <result column="this_year_thirdly_target_rebate" jdbcType="VARCHAR" property="thisYearThirdlyTargetRebate" />
+    <result column="this_year_fourthly_target_rebate" jdbcType="VARCHAR" property="thisYearFourthlyTargetRebate" />
+    <result column="this_year_no_return_award" jdbcType="VARCHAR" property="thisYearNoReturnAward" />
+    <result column="this_year_logistics_mode" jdbcType="VARCHAR" property="thisYearLogisticsMode" />
+    <result column="this_year_store_service" jdbcType="VARCHAR" property="thisYearStoreService" />
+    <result column="this_year_promotion_discount" jdbcType="VARCHAR" property="thisYearPromotionDiscount" />
+    <result column="this_year_damage_discount" jdbcType="VARCHAR" property="thisYearDamageDiscount" />
+    <result column="this_year_dt_promotion_service" jdbcType="VARCHAR" property="thisYearDtPromotionService" />
+    <result column="this_year_dj_promotion_service" jdbcType="VARCHAR" property="thisYearDjPromotionService" />
+    <result column="this_year_wc_promotion_service" jdbcType="VARCHAR" property="thisYearWcPromotionService" />
+    <result column="this_year_xc_promotion_service" jdbcType="VARCHAR" property="thisYearXcPromotionService" />
+    <result column="this_year_exhibition_service_fee" jdbcType="VARCHAR" property="thisYearExhibitionServiceFee" />
+    <result column="this_year_market_prom_service_fee" jdbcType="VARCHAR" property="thisYearMarketPromServiceFee" />
+    <result column="this_year_dm_publicize" jdbcType="VARCHAR" property="thisYearDmPublicize" />
+    <result column="this_year_qq_qz_gm" jdbcType="VARCHAR" property="thisYearQqQzGm" />
+    <result column="this_year_prom_service_fee" jdbcType="VARCHAR" property="thisYearPromServiceFee" />
+    <result column="this_year_prom_fund" jdbcType="VARCHAR" property="thisYearPromFund" />
+    <result column="this_year_festival_discount" jdbcType="VARCHAR" property="thisYearFestivalDiscount" />
+    <result column="this_year_credit_limit_fixed_amount" jdbcType="VARCHAR" property="thisYearCreditLimitFixedAmount" />
+    <result column="this_year_credit_limit_dynamic_amount" jdbcType="VARCHAR" property="thisYearCreditLimitDynamicAmount" />
+    <result column="this_year_other_instruction" jdbcType="VARCHAR" property="thisYearOtherInstruction" />
+    <result column="create_user" jdbcType="VARCHAR" property="createUser" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="modify_user" jdbcType="VARCHAR" property="modifyUser" />
+    <result column="modify_date" jdbcType="TIMESTAMP" property="modifyDate" />
+  </resultMap>
+  
+  
+  
+    <sql id="Base_Column_List">
+    id, contract_baseic_id, last_year_sales_ind_tax, last_year_sales_gross_ind_tax, last_year_settlement_paym, 
+    last_year_first_target_rebate, last_year_second_target_rebate, last_year_thirdly_target_rebate, 
+    last_year_fourthly_target_rebate, last_year_no_return_award, last_year_logistics_mode, 
+    last_year_store_service, last_year_promotion_discount, last_year_damage_discount, 
+    last_year_dt_promotion_service, last_year_dj_promotion_service, last_year_wc_promotion_service, 
+    last_year_xc_promotion_service, last_year_exhibition_service_fee, last_year_market_prom_service_fee, 
+    last_year_dm_publicize, last_year_qq_qz_gm, last_year_prom_service_fee, last_year_prom_fund, 
+    last_year_festival_discount, last_year_credit_limit_fixed_amount, last_year_credit_limit_dynamic_amount, 
+    last_year_other_instruction, this_year_sales_ind_tax, this_year_sales_gross_ind_tax, 
+    this_year_settlement_paym, this_year_first_target_rebate, this_year_second_target_rebate, 
+    this_year_thirdly_target_rebate, this_year_fourthly_target_rebate, this_year_no_return_award, 
+    this_year_logistics_mode, this_year_store_service, this_year_promotion_discount, 
+    this_year_damage_discount, this_year_dt_promotion_service, this_year_dj_promotion_service, 
+    this_year_wc_promotion_service, this_year_xc_promotion_service, this_year_exhibition_service_fee, 
+    this_year_market_prom_service_fee, this_year_dm_publicize, this_year_qq_qz_gm, this_year_prom_service_fee, 
+    this_year_prom_fund, this_year_festival_discount, this_year_credit_limit_fixed_amount, 
+    this_year_credit_limit_dynamic_amount, this_year_other_instruction, create_user, 
+    create_date, modify_user, modify_date
+  </sql>
+  
+  
+  <select id="selectContractTermsByContractBaseicId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ss_contract_terms
+    where contract_baseic_id = #{id,jdbcType=BIGINT}
+  </select>
+
+
+
+  <insert id="insertSelective" parameterType="cn.com.dhc.ec.rpc.product.entity.ContractTerms">
+    insert into ss_contract_terms
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="contractBaseicId != null">
+        contract_baseic_id,
+      </if>
+      <if test="lastYearSalesIndTax != null">
+        last_year_sales_ind_tax,
+      </if>
+      <if test="lastYearSalesGrossIndTax != null">
+        last_year_sales_gross_ind_tax,
+      </if>
+      <if test="lastYearSettlementPaym != null">
+        last_year_settlement_paym,
+      </if>
+      <if test="lastYearFirstTargetRebate != null">
+        last_year_first_target_rebate,
+      </if>
+      <if test="lastYearSecondTargetRebate != null">
+        last_year_second_target_rebate,
+      </if>
+      <if test="lastYearThirdlyTargetRebate != null">
+        last_year_thirdly_target_rebate,
+      </if>
+      <if test="lastYearFourthlyTargetRebate != null">
+        last_year_fourthly_target_rebate,
+      </if>
+      <if test="lastYearNoReturnAward != null">
+        last_year_no_return_award,
+      </if>
+      <if test="lastYearLogisticsMode != null">
+        last_year_logistics_mode,
+      </if>
+      <if test="lastYearStoreService != null">
+        last_year_store_service,
+      </if>
+      <if test="lastYearPromotionDiscount != null">
+        last_year_promotion_discount,
+      </if>
+      <if test="lastYearDamageDiscount != null">
+        last_year_damage_discount,
+      </if>
+      <if test="lastYearDtPromotionService != null">
+        last_year_dt_promotion_service,
+      </if>
+      <if test="lastYearDjPromotionService != null">
+        last_year_dj_promotion_service,
+      </if>
+      <if test="lastYearWcPromotionService != null">
+        last_year_wc_promotion_service,
+      </if>
+      <if test="lastYearXcPromotionService != null">
+        last_year_xc_promotion_service,
+      </if>
+      <if test="lastYearExhibitionServiceFee != null">
+        last_year_exhibition_service_fee,
+      </if>
+      <if test="lastYearMarketPromServiceFee != null">
+        last_year_market_prom_service_fee,
+      </if>
+      <if test="lastYearDmPublicize != null">
+        last_year_dm_publicize,
+      </if>
+      <if test="lastYearQqQzGm != null">
+        last_year_qq_qz_gm,
+      </if>
+      <if test="lastYearPromServiceFee != null">
+        last_year_prom_service_fee,
+      </if>
+      <if test="lastYearPromFund != null">
+        last_year_prom_fund,
+      </if>
+      <if test="lastYearFestivalDiscount != null">
+        last_year_festival_discount,
+      </if>
+      <if test="lastYearCreditLimitFixedAmount != null">
+        last_year_credit_limit_fixed_amount,
+      </if>
+      <if test="lastYearCreditLimitDynamicAmount != null">
+        last_year_credit_limit_dynamic_amount,
+      </if>
+      <if test="lastYearOtherInstruction != null">
+        last_year_other_instruction,
+      </if>
+      <if test="thisYearSalesIndTax != null">
+        this_year_sales_ind_tax,
+      </if>
+      <if test="thisYearSalesGrossIndTax != null">
+        this_year_sales_gross_ind_tax,
+      </if>
+      <if test="thisYearSettlementPaym != null">
+        this_year_settlement_paym,
+      </if>
+      <if test="thisYearFirstTargetRebate != null">
+        this_year_first_target_rebate,
+      </if>
+      <if test="thisYearSecondTargetRebate != null">
+        this_year_second_target_rebate,
+      </if>
+      <if test="thisYearThirdlyTargetRebate != null">
+        this_year_thirdly_target_rebate,
+      </if>
+      <if test="thisYearFourthlyTargetRebate != null">
+        this_year_fourthly_target_rebate,
+      </if>
+      <if test="thisYearNoReturnAward != null">
+        this_year_no_return_award,
+      </if>
+      <if test="thisYearLogisticsMode != null">
+        this_year_logistics_mode,
+      </if>
+      <if test="thisYearStoreService != null">
+        this_year_store_service,
+      </if>
+      <if test="thisYearPromotionDiscount != null">
+        this_year_promotion_discount,
+      </if>
+      <if test="thisYearDamageDiscount != null">
+        this_year_damage_discount,
+      </if>
+      <if test="thisYearDtPromotionService != null">
+        this_year_dt_promotion_service,
+      </if>
+      <if test="thisYearDjPromotionService != null">
+        this_year_dj_promotion_service,
+      </if>
+      <if test="thisYearWcPromotionService != null">
+        this_year_wc_promotion_service,
+      </if>
+      <if test="thisYearXcPromotionService != null">
+        this_year_xc_promotion_service,
+      </if>
+      <if test="thisYearExhibitionServiceFee != null">
+        this_year_exhibition_service_fee,
+      </if>
+      <if test="thisYearMarketPromServiceFee != null">
+        this_year_market_prom_service_fee,
+      </if>
+      <if test="thisYearDmPublicize != null">
+        this_year_dm_publicize,
+      </if>
+      <if test="thisYearQqQzGm != null">
+        this_year_qq_qz_gm,
+      </if>
+      <if test="thisYearPromServiceFee != null">
+        this_year_prom_service_fee,
+      </if>
+      <if test="thisYearPromFund != null">
+        this_year_prom_fund,
+      </if>
+      <if test="thisYearFestivalDiscount != null">
+        this_year_festival_discount,
+      </if>
+      <if test="thisYearCreditLimitFixedAmount != null">
+        this_year_credit_limit_fixed_amount,
+      </if>
+      <if test="thisYearCreditLimitDynamicAmount != null">
+        this_year_credit_limit_dynamic_amount,
+      </if>
+      <if test="thisYearOtherInstruction != null">
+        this_year_other_instruction,
+      </if>
+      <if test="createUser != null">
+        create_user,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="modifyUser != null">
+        modify_user,
+      </if>
+      <if test="modifyDate != null">
+        modify_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="contractBaseicId != null">
+        #{contractBaseicId,jdbcType=BIGINT},
+      </if>
+      <if test="lastYearSalesIndTax != null">
+        #{lastYearSalesIndTax,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearSalesGrossIndTax != null">
+        #{lastYearSalesGrossIndTax,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearSettlementPaym != null">
+        #{lastYearSettlementPaym,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearFirstTargetRebate != null">
+        #{lastYearFirstTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearSecondTargetRebate != null">
+        #{lastYearSecondTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearThirdlyTargetRebate != null">
+        #{lastYearThirdlyTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearFourthlyTargetRebate != null">
+        #{lastYearFourthlyTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearNoReturnAward != null">
+        #{lastYearNoReturnAward,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearLogisticsMode != null">
+        #{lastYearLogisticsMode,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearStoreService != null">
+        #{lastYearStoreService,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearPromotionDiscount != null">
+        #{lastYearPromotionDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearDamageDiscount != null">
+        #{lastYearDamageDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearDtPromotionService != null">
+        #{lastYearDtPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearDjPromotionService != null">
+        #{lastYearDjPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearWcPromotionService != null">
+        #{lastYearWcPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearXcPromotionService != null">
+        #{lastYearXcPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearExhibitionServiceFee != null">
+        #{lastYearExhibitionServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearMarketPromServiceFee != null">
+        #{lastYearMarketPromServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearDmPublicize != null">
+        #{lastYearDmPublicize,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearQqQzGm != null">
+        #{lastYearQqQzGm,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearPromServiceFee != null">
+        #{lastYearPromServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearPromFund != null">
+        #{lastYearPromFund,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearFestivalDiscount != null">
+        #{lastYearFestivalDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearCreditLimitFixedAmount != null">
+        #{lastYearCreditLimitFixedAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearCreditLimitDynamicAmount != null">
+        #{lastYearCreditLimitDynamicAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearOtherInstruction != null">
+        #{lastYearOtherInstruction,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearSalesIndTax != null">
+        #{thisYearSalesIndTax,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearSalesGrossIndTax != null">
+        #{thisYearSalesGrossIndTax,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearSettlementPaym != null">
+        #{thisYearSettlementPaym,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearFirstTargetRebate != null">
+        #{thisYearFirstTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearSecondTargetRebate != null">
+        #{thisYearSecondTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearThirdlyTargetRebate != null">
+        #{thisYearThirdlyTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearFourthlyTargetRebate != null">
+        #{thisYearFourthlyTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearNoReturnAward != null">
+        #{thisYearNoReturnAward,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearLogisticsMode != null">
+        #{thisYearLogisticsMode,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearStoreService != null">
+        #{thisYearStoreService,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearPromotionDiscount != null">
+        #{thisYearPromotionDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearDamageDiscount != null">
+        #{thisYearDamageDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearDtPromotionService != null">
+        #{thisYearDtPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearDjPromotionService != null">
+        #{thisYearDjPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearWcPromotionService != null">
+        #{thisYearWcPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearXcPromotionService != null">
+        #{thisYearXcPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearExhibitionServiceFee != null">
+        #{thisYearExhibitionServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearMarketPromServiceFee != null">
+        #{thisYearMarketPromServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearDmPublicize != null">
+        #{thisYearDmPublicize,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearQqQzGm != null">
+        #{thisYearQqQzGm,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearPromServiceFee != null">
+        #{thisYearPromServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearPromFund != null">
+        #{thisYearPromFund,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearFestivalDiscount != null">
+        #{thisYearFestivalDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearCreditLimitFixedAmount != null">
+        #{thisYearCreditLimitFixedAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearCreditLimitDynamicAmount != null">
+        #{thisYearCreditLimitDynamicAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearOtherInstruction != null">
+        #{thisYearOtherInstruction,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUser != null">
+        #{modifyUser,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyDate != null">
+        #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+  
+  
+  
+  
+  
+   <update id="updateByPrimaryKey" parameterType="cn.com.dhc.ec.rpc.product.entity.ContractTerms">
+    update ss_contract_terms
+    <set>
+      <if test="contractBaseicId != null">
+        contract_baseic_id = #{contractBaseicId,jdbcType=BIGINT},
+      </if>
+      <if test="lastYearSalesIndTax != null">
+        last_year_sales_ind_tax = #{lastYearSalesIndTax,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearSalesGrossIndTax != null">
+        last_year_sales_gross_ind_tax = #{lastYearSalesGrossIndTax,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearSettlementPaym != null">
+        last_year_settlement_paym = #{lastYearSettlementPaym,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearFirstTargetRebate != null">
+        last_year_first_target_rebate = #{lastYearFirstTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearSecondTargetRebate != null">
+        last_year_second_target_rebate = #{lastYearSecondTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearThirdlyTargetRebate != null">
+        last_year_thirdly_target_rebate = #{lastYearThirdlyTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearFourthlyTargetRebate != null">
+        last_year_fourthly_target_rebate = #{lastYearFourthlyTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearNoReturnAward != null">
+        last_year_no_return_award = #{lastYearNoReturnAward,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearLogisticsMode != null">
+        last_year_logistics_mode = #{lastYearLogisticsMode,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearStoreService != null">
+        last_year_store_service = #{lastYearStoreService,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearPromotionDiscount != null">
+        last_year_promotion_discount = #{lastYearPromotionDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearDamageDiscount != null">
+        last_year_damage_discount = #{lastYearDamageDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearDtPromotionService != null">
+        last_year_dt_promotion_service = #{lastYearDtPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearDjPromotionService != null">
+        last_year_dj_promotion_service = #{lastYearDjPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearWcPromotionService != null">
+        last_year_wc_promotion_service = #{lastYearWcPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearXcPromotionService != null">
+        last_year_xc_promotion_service = #{lastYearXcPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearExhibitionServiceFee != null">
+        last_year_exhibition_service_fee = #{lastYearExhibitionServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearMarketPromServiceFee != null">
+        last_year_market_prom_service_fee = #{lastYearMarketPromServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearDmPublicize != null">
+        last_year_dm_publicize = #{lastYearDmPublicize,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearQqQzGm != null">
+        last_year_qq_qz_gm = #{lastYearQqQzGm,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearPromServiceFee != null">
+        last_year_prom_service_fee = #{lastYearPromServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearPromFund != null">
+        last_year_prom_fund = #{lastYearPromFund,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearFestivalDiscount != null">
+        last_year_festival_discount = #{lastYearFestivalDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearCreditLimitFixedAmount != null">
+        last_year_credit_limit_fixed_amount = #{lastYearCreditLimitFixedAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearCreditLimitDynamicAmount != null">
+        last_year_credit_limit_dynamic_amount = #{lastYearCreditLimitDynamicAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearOtherInstruction != null">
+        last_year_other_instruction = #{lastYearOtherInstruction,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearSalesIndTax != null">
+        this_year_sales_ind_tax = #{thisYearSalesIndTax,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearSalesGrossIndTax != null">
+        this_year_sales_gross_ind_tax = #{thisYearSalesGrossIndTax,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearSettlementPaym != null">
+        this_year_settlement_paym = #{thisYearSettlementPaym,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearFirstTargetRebate != null">
+        this_year_first_target_rebate = #{thisYearFirstTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearSecondTargetRebate != null">
+        this_year_second_target_rebate = #{thisYearSecondTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearThirdlyTargetRebate != null">
+        this_year_thirdly_target_rebate = #{thisYearThirdlyTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearFourthlyTargetRebate != null">
+        this_year_fourthly_target_rebate = #{thisYearFourthlyTargetRebate,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearNoReturnAward != null">
+        this_year_no_return_award = #{thisYearNoReturnAward,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearLogisticsMode != null">
+        this_year_logistics_mode = #{thisYearLogisticsMode,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearStoreService != null">
+        this_year_store_service = #{thisYearStoreService,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearPromotionDiscount != null">
+        this_year_promotion_discount = #{thisYearPromotionDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearDamageDiscount != null">
+        this_year_damage_discount = #{thisYearDamageDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearDtPromotionService != null">
+        this_year_dt_promotion_service = #{thisYearDtPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearDjPromotionService != null">
+        this_year_dj_promotion_service = #{thisYearDjPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearWcPromotionService != null">
+        this_year_wc_promotion_service = #{thisYearWcPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearXcPromotionService != null">
+        this_year_xc_promotion_service = #{thisYearXcPromotionService,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearExhibitionServiceFee != null">
+        this_year_exhibition_service_fee = #{thisYearExhibitionServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearMarketPromServiceFee != null">
+        this_year_market_prom_service_fee = #{thisYearMarketPromServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearDmPublicize != null">
+        this_year_dm_publicize = #{thisYearDmPublicize,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearQqQzGm != null">
+        this_year_qq_qz_gm = #{thisYearQqQzGm,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearPromServiceFee != null">
+        this_year_prom_service_fee = #{thisYearPromServiceFee,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearPromFund != null">
+        this_year_prom_fund = #{thisYearPromFund,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearFestivalDiscount != null">
+        this_year_festival_discount = #{thisYearFestivalDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearCreditLimitFixedAmount != null">
+        this_year_credit_limit_fixed_amount = #{thisYearCreditLimitFixedAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearCreditLimitDynamicAmount != null">
+        this_year_credit_limit_dynamic_amount = #{thisYearCreditLimitDynamicAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="thisYearOtherInstruction != null">
+        this_year_other_instruction = #{thisYearOtherInstruction,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUser != null">
+        modify_user = #{modifyUser,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyDate != null">
+        modify_date = #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+
+</mapper>
